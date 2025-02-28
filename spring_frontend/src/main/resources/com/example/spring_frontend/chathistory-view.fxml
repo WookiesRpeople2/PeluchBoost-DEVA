@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" spacing="10" styleClass="window" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.example.spring_frontend.controllers.ChatHistoryController">
+
+    <padding>
+        <Insets bottom="20" left="20" right="20" top="20" />
+    </padding>
+
+    <HBox spacing="10" alignment="CENTER_LEFT">
+        <Label fx:id="usernameLabel" text="Chat History" styleClass="username"/>
+        <Region HBox.hgrow="ALWAYS" />
+        <Button text="Back to User List" onAction="#handleBackToUserList" />
+    </HBox>
+
+    <ScrollPane fx:id="scrollPane" styleClass="scroll" VBox.vgrow="ALWAYS">
+        <VBox fx:id="chatHistoryBox" spacing="5" />
+    </ScrollPane>
+</VBox>

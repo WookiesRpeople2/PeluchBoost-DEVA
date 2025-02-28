@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox prefHeight="386.0" prefWidth="542.0" spacing="10" styleClass="window" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.spring_frontend.controllers.MessageController">
+    
+    <padding>
+        <Insets bottom="20" left="20" right="20" top="20" />
+    </padding>
+   <Button mnemonicParsing="false" text="View history" onAction="#handleViewHistory"/>
+
+    <ScrollPane fx:id="scrollPane" styleClass="scroll" VBox.vgrow="ALWAYS">
+        <VBox fx:id="chatBox" spacing="5" />
+    </ScrollPane>
+
+    <HBox spacing="10" styleClass="input-container">
+        <TextField fx:id="messageField" onAction="#handleSendMessage" promptText="Your message" styleClass="input-field" HBox.hgrow="ALWAYS" />
+        <Button onAction="#handleSendMessage" styleClass="send-button" text="Envoyer" />
+    </HBox>
+</VBox>

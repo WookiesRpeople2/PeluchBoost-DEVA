@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" spacing="10" styleClass="window" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.spring_frontend.controllers.UserListController">
+
+    <padding>
+        <Insets bottom="20" left="20" right="20" top="20" />
+    </padding>
+
+    <HBox alignment="CENTER_LEFT" spacing="10">
+        <Label styleClass="username" text="All Users" textFill="#fcf9f9" />
+        <Region />
+        <Button onAction="#handleBackToChat" text="Back to Chat" />
+    </HBox>
+
+    <ScrollPane fx:id="scrollPane" styleClass="scroll">
+        <VBox fx:id="usersBox" spacing="5"/>
+    </ScrollPane>
+</VBox>

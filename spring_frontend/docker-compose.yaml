@@ -1,0 +1,16 @@
+services:
+  db:
+      container_name: back
+      image: mysql:latest
+      ports:
+        - 3306:3307
+      environment:
+        MYSQL_ROOT_PASSWORD: password
+        MYSQL_DATABASE: PeluchBoost
+        MYSQL_USER: user
+        MYSQL_PASSWORD: password
+      volumes:
+        - mysql-data:/var/lib/mysql
+
+volumes:
+    mysql-data:
